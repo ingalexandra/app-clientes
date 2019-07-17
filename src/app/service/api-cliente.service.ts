@@ -10,16 +10,17 @@ export class ApiClienteService {
       nombre:"alexa",
       id:"123",
       edad:24,
-      fechaNacimiento:"2018-10-10"
+      fecha:"2018-10-10"
     },
     {
       nombre:"victor",
       id:"1236",
       edad:25,
-      fechaNacimiento:"2018-10-18"
+      fecha:"2018-10-18"
     },
   ]
   constructor() { }
+
   getClientes():Cliente[]{
     return this.clientes;
   }
