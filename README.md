@@ -1,27 +1,11 @@
-# AppClientes
+# Aplicacion de Clientes en Angular 8 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+Se creo un cliente en Angular en su version 8. En el cual, se consume el SERVICIO WEB RESTFUL (JAXRS) y lista los clientes
+en una tabla que consta de los siguientes campos: identificacion, nombre, edad, fecha de nacimiento y botones para ejecutar las acciones: ver y editar; el botón de ver, muestra en otra pantalla en detalle la informacion del cliente y el botón de editar, sólo habilita los campos para modificar los parametros del cliente. 
 
-## Development server
+## Pasos para ejecutar el código:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. Descargar el proyecto en un directorio.
+2. En consola, ubicarse en el directorio del proyecto.
+3. Correr el comando `ng serve`.
+4. Y por último, en el navegador, abrir el siguiente enlance: `http://localhost:4200/`.
