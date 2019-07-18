@@ -1,0 +1,19 @@
+<form >
+    <div class="form-group">
+        <label for="id">Identificacion</label>
+        <input type="number" class="form-control" id="id" value="{{cliente.id}}">
+    </div>
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" value="{{cliente.nombre}}">
+    </div>
+    <div class="form-group">
+        <label for="edad">Edad</label>
+        <input type="number" class="form-control" id="edad" value="{{cliente.edad}}">
+    </div>
+    <div class="form-group">
+        <label for="fecha">Fecha Nacimiento</label>
+        <input type="text" class="form-control" id="fecha" value="{{cliente.fecha}}">
+    </div>
+    <button type="submit" class="btn btn-primary" [routerLink]="['/']">volver</button>
+</form>

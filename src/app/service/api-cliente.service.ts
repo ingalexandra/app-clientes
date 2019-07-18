@@ -1,27 +1,16 @@
 import { Injectable } from '@angular/core';
 import {Cliente} from '../model/cliente'
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiClienteService {
-  clientes:Cliente[] = [
-    {
-      nombre:"alexa",
-      id:"123",
-      edad:24,
-      fecha:"2018-10-10"
-    },
-    {
-      nombre:"victor",
-      id:"1236",
-      edad:25,
-      fecha:"2018-10-18"
-    },
-  ]
-  constructor() { }
+  url:String = "http://localhost:8080/apiCliente/rest/";
+  constructor(public http: HttpClient) { }
 
-  getClientes():Cliente[]{
-    return this.clientes;
+  getClientes():Observable<Cliente[]>{
+    return this.http.get<Cliente[]>(this.url + "clientes");
   }
 }

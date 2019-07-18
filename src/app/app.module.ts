@@ -4,13 +4,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DetailsComponent } from './details/details.component';
+import { ListarClientesComponent } from './listar-clientes/listar-clientes.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DetailsComponent,
+    ListarClientesComponent
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     HttpClientModule,
     AppRoutingModule
   ],

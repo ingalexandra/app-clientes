@@ -1,0 +1,50 @@
+<div class="text-center p-5">
+        <h1>Listado de Clientes</h1>
+      </div>
+      <div class="container">
+        <div class="row clearfix">
+          <div class="col-md-12">
+            <table class="table table-bordered table-hover" id="tabla_clientes">
+              <thead>
+                <tr >
+                  <th class="text-center">
+                    Identificacion
+                  </th>
+                  <th class="text-center">
+                    Nombre
+                  </th>
+                  <th class="text-center">
+                    Edad
+                  </th>
+                  <th class="text-center">
+                    Fecha de Nacimiento
+                  </th>
+                  <th class="text-center">
+                    Acciones
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let cliente of clientes">
+                  <td>
+                    <input type="text" name='id'  placeholder='ID' class="form-control" value="{{cliente.id}}" [attr.readonly]="cliente.edit == true ? null: ''"/>
+                  </td>
+                  <td>
+                    <input type="text" name='name'  placeholder='Name' class="form-control" value="{{cliente.nombre}}" [attr.readonly]="cliente.edit == true ? null: ''"/>
+                  </td>
+                  <td>
+                    <input type="text" name='edad' placeholder='Edad' class="form-control" value="{{cliente.edad}}" [attr.readonly]="cliente.edit == true ? null: ''"/>
+                  </td>
+                  <td>
+                    <input type="text" name='fecha' placeholder='Fecha' class="form-control" value="{{cliente.fecha}}" [attr.readonly]="cliente.edit == true ? null: ''"/>
+                  </td>
+                  <td width="12%">
+                    <button type="button" id="btnEdit" class="btn btn-primary m-1" [routerLink]="['/cliente', cliente.id]"><fa-icon [icon]="faEye"></fa-icon></button>
+                    <button type="button" id="btnView" class="btn btn-success m-1" (click)="editar(cliente)"><fa-icon [icon]="faEdit"></fa-icon></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
